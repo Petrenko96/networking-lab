@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function mk_topo {
+	
+	add_link R1 R2 # R1-eth0 - R2-eth0
+	add_link R1 R3 # R1-eth1 - R3-eth0
+	add_link R2 R3 # R2-eth1 - R3-eth0
+
+
+	mk_LAN R1 H11 H12 H13 # R1-lan0 R11-eth0 R12-eth0 R13-eth0
+	mk_LAN R2 H21 H22 H23 # R2-lan0 R21-eth0 R22-eth0 R23-eth0
+	mk_LAN R3 H31 H32 H33 # R3-lan0 R31-eth0 R32-eth0 R33-eth0
+}
